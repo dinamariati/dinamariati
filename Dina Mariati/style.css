@@ -1,0 +1,204 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth; /* Scroll smooth saat klik anchor */
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Container untuk Section */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #5a3ec8;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #5a3ec8;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 400px;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.purple-text {
+  color: #5a3ec8;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a3ec8;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Lingkaran di belakang gambar */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  background-color: rgba(90, 62, 200, 0.1);
+  border-radius: 50%;
+  top: -10px;
+  left: -15px;
+  z-index: 1;
+}
+
+/* Elemen Dekoratif */
+.decorations {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  z-index: 3;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.black {
+  background-color: #333;
+}
+
+.purple {
+  background-color: #5a3ec8;
+}
+
+/* Section Styling */
+.section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #5a3ec8;
+}
+
+.section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Button style */
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5a3ec8;
+}
+
+/* Tambahkan efek saat button diklik */
+.btn:active {
+  background-color: #3a2a99; /* warna lebih gelap saat diklik */
+}
