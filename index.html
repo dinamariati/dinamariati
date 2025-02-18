@@ -5,30 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Dina Mariati</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Menambahkan Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px;
+        }
+        
+        .mobile-header {
+            width: 100%;
+            text-align: center;
+            background-color: #0077b5;
+            color: white;
+            padding: 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            gap: 20px;
+        }
+        
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #0077b5;
+        }
+        
+        .profile h2 {
+            font-size: 1.6em;
+            color: #0077b5;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .navigation ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            padding: 10px;
+            background-color: #edf2fb;
+            border-radius: 10px;
+            gap: 10px;
+        }
+        
+        .navigation ul li {
+            list-style: none;
+        }
+        
+        .navigation ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1em;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        
+        .navigation ul li a:hover {
+            background: #0077b5;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .content {
+            width: 100%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section h1 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0077b5;
+            padding-bottom: 5px;
+        }
+        
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        
+        .skills-img {
+            width: 50%;
+            max-width: 100px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-media a {
+            font-size: 1.8em;
+            color: #0077b5;
+            transition: color 0.3s, transform 0.2s;
+        }
+        
+        .social-media a:hover {
+            color: #005f8a;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
+    <header class="mobile-header">
+        <h1>Hi, I Am Designer</h1>
+    </header>
+    
     <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="dina.jpg" alt="Foto Profil">
-                <h2>Dina Mariati</h2>
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#about" onclick="showContent('about')">About Me</a></li>
-                    <li><a href="#experience" onclick="showContent('experience')">Experience</a></li>
-                    <li><a href="#skills" onclick="showContent('skills')">Skills</a></li>
-                    <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
-                </ul>
-            </nav>
-        </aside>
+        <div class="profile">
+            <img src="dina.jpg" alt="Foto Profil">
+            <h2>Dina Mariati</h2>
+        </div>
+        
+        <nav class="navigation">
+            <ul>
+                <li><a href="#about" onclick="showContent(event, 'about')">About</a></li>
+                <li><a href="#experience" onclick="showContent(event, 'experience')">Experience</a></li>
+                <li><a href="#skills" onclick="showContent(event, 'skills')">Skills</a></li>
+                <li><a href="#contact" onclick="showContent(event, 'contact')">Contact</a></li>
+            </ul>
+        </nav>
+        
         <main class="content">
-            <section id="home" class="section active">
-                <h1>I Am a Designer</h1>
-                <img src="dina.jpg" alt="Desain">
-            </section>
             <section id="about" class="section">
     <h1>About Me</h1>
     
@@ -60,7 +197,6 @@
         Let’s collaborate and bring your vision to life through impactful and meaningful design!
     </p>
 </section>
-
             <section id="experience" class="section">
     <h1>Experience</h1>
     
@@ -85,7 +221,6 @@
         I am currently pursuing my studies in the Computer Science Department, where I am expanding my skills in technology, programming, and system development, bridging the gap between design and technology.
     </p>
 </section>
-
             <section id="skills" class="section">
     <h1>Skills</h1>
     
@@ -95,44 +230,25 @@
     <p>
         I am proficient in various graphic design software tools that help me bring creative ideas to life. Below are the main tools I use in my design projects.
     </p>
-    
-    <header>
-        <h3>CorelDRAW</h3>
-    </header>
-    <p>
-        CorelDRAW is one of my primary tools for vector-based graphic design, allowing me to create logos, illustrations, and other scalable artwork.
-    </p>
-    <div class="skills-images">
-        <img src="coreldraw.png" alt="CorelDRAW" title="CorelDRAW">
-    </div>
-    
-    <header>
-        <h3>Adobe Photoshop</h3>
-    </header>
-    <p>
-        Adobe Photoshop is my go-to tool for photo manipulation, editing, and creating digital artwork. I use it to enhance images, design layouts, and much more.
-    </p>
-    <div class="skills-images">
-        <img src="Photoshop.png" alt="Photoshop" title="Photoshop">
-    </div>
-</section>
-
-<section id="contact" class="section">
+                <img src="Coreldraw.png" alt="CorelDraw" class="skills-img">
+                <img src="Photoshop.png" alt="Photoshop" class="skills-img">
+            </section>
+            <section id="contact" class="section">
                 <h1>Contact</h1>
                 <div class="social-media">
-                    <a href="https://www.linkedin.com/in/Dina Mariati" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:dinamariati44@gmail.com" target="_blank">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.instagram.com/dinamrtii" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/DinaMariati" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:dinamariati44@example.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/dinamrtii" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
             </section>
         </main>
     </div>
-    <script src="scripts.js"></script>
+    <script>
+        function showContent(event, sectionId) {
+            event.preventDefault();
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
