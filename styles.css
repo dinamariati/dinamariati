@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #EDF2FB;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    position: fixed; /* Membuat sidebar tetap di sisi kiri */
+    height: 100vh; /* Menjaga tinggi sidebar sama dengan tinggi layar */
+    top: 0; /* Posisi sidebar di bagian atas */
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada sidebar */
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.profile h2 {
+    margin-top: 20px;
+    font-size: 3.4em; /* Ukuran font untuk nama profil */
+    text-align: center; /* Menyusun nama agar rata tengah */
+    border-bottom: 2px solid #0077b5; /* Menambahkan border bawah pada nama */
+    padding-bottom: 10px;
+}
+
+.skills-images img {
+    width: 100px;
+    margin-right: 20px; /* Jarak antar gambar */
+}
+
+.navigation ul {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    margin: 15px 0;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    transition: background 0.3s;
+    font-size: 1.5em;
+}
+
+.navigation ul li a:hover {
+    background-color: #F0FFFF;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 320px; /* Memberikan jarak agar konten tidak tertutup sidebar */
+    padding: 50px;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease; /* Animasi saat margin berubah pada tampilan mobile */
+    border-left: 2px solid #ddd; /* Menambahkan border kiri pada konten */
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h1 {
+    font-size: 3.5em; /* Ukuran font untuk judul section */
+    margin-bottom: 20px; /* Memberikan jarak di bawah judul */
+    border-bottom: 3px solid #0077b5; /* Border bawah pada setiap judul section */
+    padding-bottom: 10px;
+}
+
+.section p {
+    font-size: 1.2em; /* Ukuran font untuk paragraf */
+    line-height: 1.6; /* Menambah jarak antar baris agar lebih mudah dibaca */
+    margin-bottom: 20px; /* Memberikan jarak di bawah paragraf */
+}
+
+.social-media a {
+    margin-right: 20px; /* Jarak antar ikon */
+    font-size: 30px; /* Ukuran ikon */
+    color: #000; /* Warna ikon */
+    transition: color 0.3s ease; /* Efek transisi warna saat hover */
+}
+
+.social-media a:hover {
+    color: #0077b5; /* Warna saat hover (LinkedIn blue) */
+}
+
+.section img {
+    max-width: 30%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Membuat border pada gambar */
+    border: 2px solid #0077b5; /* Border warna biru pada gambar */
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        position: relative;
+        height: auto; /* Menyesuaikan tinggi sidebar di perangkat kecil */
+    }
+    .profile img {
+        width: 150px;
+        height: 150px;
+    }
+    .profile h2 {
+        font-size: 2em;
+    }
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .navigation ul li {
+        margin: 0 10px;
+    }
+    .content {
+        padding: 20px;
+        margin-left: 0; /* Menghilangkan margin kiri pada perangkat kecil */
+    }
+
+    .navigation ul li a:hover {
+        color: #0077b5; /* LinkedIn blue */
+    }
+
+    .social-media a {
+        margin-right: 20px;
+        font-size: 30px;
+        color: #000;
+        transition: color 0.3s ease;
+    }
+
+    .social-media a:hover {
+        color: #0077b5; /* Warna saat hover (LinkedIn blue) */
+    }
+}

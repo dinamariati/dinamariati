@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio - Dina Mariati</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Dina Mariati</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Menambahkan Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div class="logo">
-      <img src="dina.jpg" alt="Dina Mariati">
-      <span>Dina Mariati</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#tentang-saya">Tentang Saya</a></li>
-        <li><a href="#pengalaman">Pengalaman</a></li>
-        <li><a href="#skill">Skill</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1><span class="purple-text">Dina Mariati</span></h1>
-      <p>Design Grafis</p>
-      <a href="#tentang-saya" class="btn">Lihat Portofolio</a>
-    </div>
-    <div class="hero-image">
-      <div class="decorations">
-        <div class="square black"></div>
-        <div class="square purple"></div>
-      </div>
-      <img src="dina.jpg" alt="Dina Mariati">
-    </div>
-  </section>
-
-  <!-- Tentang Saya Section -->
-  <section id="tentang-saya" class="section">
     <div class="container">
-      <h2>Tentang Saya</h2>
-      <p>Saya adalah seorang desainer grafis dengan pengalaman 3 tahun, khususnya dalam pembuatan flyer media. Selama karier saya, saya telah mengerjakan berbagai proyek desain untuk berbagai platform, baik digital maupun cetak, mencakup media sosial, branding, dan materi promosi. Dengan keahlian dalam menciptakan desain yang tidak hanya menarik secara visual tetapi juga komunikatif, saya selalu berusaha menyampaikan pesan dengan cara yang efektif dan sesuai dengan kebutuhan klien. Kreativitas, perhatian terhadap detail, serta pemahaman tren desain terbaru menjadi bagian dari pendekatan saya dalam setiap proyek yang saya kerjakan.</p>
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="dina.jpg" alt="Foto Profil">
+                <h2>Dina Mariati</h2>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about" onclick="showContent('about')">About Me</a></li>
+                    <li><a href="#experience" onclick="showContent('experience')">Experience</a></li>
+                    <li><a href="#skills" onclick="showContent('skills')">Skills</a></li>
+                    <li><a href="#contact" onclick="showContent('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <section id="home" class="section active">
+                <h1>I Am a Designer</h1>
+                <img src="dina.jpg" alt="Desain">
+            </section>
+            <section id="about" class="section">
+    <h1>About Me</h1>
+    
+    <header>
+        <h2>Who Am I?</h2>
+    </header>
+    <p>
+        Hi, I’m Dina Mariati, a passionate graphic designer with over 3 years of experience in the world of visual communication. I specialize in creating eye-catching flyers, but my journey goes beyond that. I’ve had the privilege of working on diverse design projects across both digital and print media, including social media graphics, brand identities, and promotional materials.
+    </p>
+    
+    <header>
+        <h2>My Design Philosophy</h2>
+    </header>
+    <p>
+        For me, design is not just about making things look good—it's about telling a story. I focus on crafting designs that speak to the audience, making complex ideas simple and clear. By blending creativity with strategic thinking, I ensure every project I work on resonates with its intended message while staying true to the client’s vision.
+    </p>
+    
+    <header>
+        <h2>What Drives Me</h2>
+    </header>
+    <p>
+        What drives me is the excitement of transforming ideas into visual concepts that engage and inspire. Whether it's designing a new logo, revamping a brand, or creating content that stands out on social media, I’m dedicated to delivering exceptional results that not only meet but exceed expectations.
+    </p>
+    
+    <header>
+        <h2>Let’s Work Together!</h2>
+    </header>
+    <p>
+        Let’s collaborate and bring your vision to life through impactful and meaningful design!
+    </p>
+</section>
+
+            <section id="experience" class="section">
+    <h1>Experience</h1>
+    
+    <header>
+        <h2>Multimedia Major School (2017 - 2020)</h2>
+    </header>
+    <p>
+        During my time at Multimedia Major School, I gained foundational knowledge and skills in various areas of multimedia and design. This period shaped my passion for graphic design and multimedia production.
+    </p>
+    
+    <header>
+        <h2>Graphic Designer (2022 - Present)</h2>
+    </header>
+    <p>
+        Since 2022, I have been working professionally in the graphic design field, specializing in creating digital and print designs such as social media graphics, promotional materials, and brand identities.
+    </p>
+    
+    <header>
+        <h2>Computer Science Department (2022 - Present)</h2>
+    </header>
+    <p>
+        I am currently pursuing my studies in the Computer Science Department, where I am expanding my skills in technology, programming, and system development, bridging the gap between design and technology.
+    </p>
+</section>
+
+            <section id="skills" class="section">
+    <h1>Skills</h1>
+    
+    <header>
+        <h2>Graphic Design Tools</h2>
+    </header>
+    <p>
+        I am proficient in various graphic design software tools that help me bring creative ideas to life. Below are the main tools I use in my design projects.
+    </p>
+    
+    <header>
+        <h3>CorelDRAW</h3>
+    </header>
+    <p>
+        CorelDRAW is one of my primary tools for vector-based graphic design, allowing me to create logos, illustrations, and other scalable artwork.
+    </p>
+    <div class="skills-images">
+        <img src="coreldraw.png" alt="CorelDRAW" title="CorelDRAW">
     </div>
-  </section>
-
-  <!-- Pengalaman Section -->
-  <section id="pengalaman" class="section">
-    <div class="container">
-      <h2>Pengalaman</h2>
-      <p>Pekerjaan ini bukan hanya soal menggambar atau merancang desain, tapi juga tentang bagaimana menyampaikan pesan dengan cara yang menarik dan mudah dipahami. Setiap pagi biasanya dimulai dengan mengecek pesan dari admin dan tim. Kadang ada revisi yang perlu dikerjakan, kadang juga ada proyek baru yang harus segera dibuat. Setelah itu, brainstorming dimulai. Mencari inspirasi, membuat sketsa awal, hingga menentukan warna dan font yang sesuai untuk desain yang sedang dikerjakan. Di tengah-tengah hari, biasanya sudah mulai masuk ke tahap eksekusi. Software seperti Photoshop, Illustrator, atau CorelDRAW jadi senjata utama untuk mengolah ide menjadi desain yang nyata. Jika mengerjakan desain untuk media sosial, perlu mempertimbangkan tren visual yang sedang populer. Kalau membuat logo atau branding, harus memastikan desainnya punya identitas yang kuat dan bisa mewakili bisnis atau produk yang diwakilinya.
-
-Terkadang, ada meeting dengan klien atau tim marketing untuk mendiskusikan konsep desain. Di sini, komunikasi jadi kunci, karena harus bisa menjelaskan ide dengan jelas dan menerima masukan dengan terbuka. Proses revisi adalah bagian yang tidak bisa dihindari, tapi justru di sinilah kreativitas semakin terasah.
-
-Menjelang sore, biasanya mulai merapikan hasil kerjaan, mengecek detail kecil agar tidak ada kesalahan, dan mengirimkan hasil akhir ke klien atau atasan. Kalau ada waktu luang, biasanya dihabiskan dengan mencari inspirasi baru, belajar teknik desain terbaru, atau sekadar refreshing supaya otak tetap segar untuk proyek selanjutnya. Bekerja sebagai desainer grafis memang penuh tantangan, tapi juga seru. Setiap hari ada hal baru untuk dipelajari, dan yang paling menyenangkan adalah melihat desain yang dibuat akhirnya digunakan dan diapresiasi oleh banyak orang.</p>
+    
+    <header>
+        <h3>Adobe Photoshop</h3>
+    </header>
+    <p>
+        Adobe Photoshop is my go-to tool for photo manipulation, editing, and creating digital artwork. I use it to enhance images, design layouts, and much more.
+    </p>
+    <div class="skills-images">
+        <img src="Photoshop.png" alt="Photoshop" title="Photoshop">
     </div>
-  </section>
+</section>
 
-  <!-- Skill Section -->
-  <section id="skill" class="section">
-    <div class="container">
-      <h2>Skill</h2>
-      <p> Adobe Photoshop, Coreldraw, Illustrator, </p>
+<section id="contact" class="section">
+                <h1>Contact</h1>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/Dina Mariati" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:dinamariati44@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dinamrtii" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
     </div>
-  </section>
-
-  <!-- Kontak Section -->
-  <section id="kontak" class="section">
-    <div class="container">
-      <h2>Kontak</h2>
-      <p>Instagram: dinamrtii
-        Linkedln : Dina Mariati
-        Email : dinamariati44@gmail.com</p>
-    </div>
-  </section>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
